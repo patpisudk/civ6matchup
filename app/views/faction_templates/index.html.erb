@@ -1,0 +1,292 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All factions
+    </h1>
+
+    <a href="/factions/new" class="btn btn-block btn-outline-secondary">
+      Add a new faction
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Civ
+        </th>
+
+        <th>
+          Leader
+        </th>
+
+        <th>
+          Dom score land
+        </th>
+
+        <th>
+          Dom score water
+        </th>
+
+        <th>
+          Dom def land
+        </th>
+
+        <th>
+          Dom def water
+        </th>
+
+        <th>
+          Sci score land
+        </th>
+
+        <th>
+          Sci score water
+        </th>
+
+        <th>
+          Sci def land
+        </th>
+
+        <th>
+          Sci def water
+        </th>
+
+        <th>
+          Cul score land
+        </th>
+
+        <th>
+          Cul score water
+        </th>
+
+        <th>
+          Cul def land
+        </th>
+
+        <th>
+          Cul def water
+        </th>
+
+        <th>
+          Rel score land
+        </th>
+
+        <th>
+          Rel score water
+        </th>
+
+        <th>
+          Rel def land
+        </th>
+
+        <th>
+          Rel def water
+        </th>
+
+        <th>
+          Dip score land
+        </th>
+
+        <th>
+          Dip score water
+        </th>
+
+        <th>
+          Dip def land
+        </th>
+
+        <th>
+          Dip def water
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @factions.each do |faction| %>
+      <tr>
+        <!-- Display faction.id start -->
+        <td>
+          <%= faction.id %>
+        </td>
+        <!-- Display faction.id end -->
+
+        <!-- Display faction.civ_id start -->
+        <td>
+          <%= faction.civ_id %>
+        </td>
+        <!-- Display faction.civ_id end -->
+
+        <!-- Display faction.leader_id start -->
+        <td>
+          <%= faction.leader_id %>
+        </td>
+        <!-- Display faction.leader_id end -->
+
+        <!-- Display faction.dom_score_land start -->
+        <td>
+          <%= faction.dom_score_land %>
+        </td>
+        <!-- Display faction.dom_score_land end -->
+
+        <!-- Display faction.dom_score_water start -->
+        <td>
+          <%= faction.dom_score_water %>
+        </td>
+        <!-- Display faction.dom_score_water end -->
+
+        <!-- Display faction.dom_def_land start -->
+        <td>
+          <%= faction.dom_def_land %>
+        </td>
+        <!-- Display faction.dom_def_land end -->
+
+        <!-- Display faction.dom_def_water start -->
+        <td>
+          <%= faction.dom_def_water %>
+        </td>
+        <!-- Display faction.dom_def_water end -->
+
+        <!-- Display faction.sci_score_land start -->
+        <td>
+          <%= faction.sci_score_land %>
+        </td>
+        <!-- Display faction.sci_score_land end -->
+
+        <!-- Display faction.sci_score_water start -->
+        <td>
+          <%= faction.sci_score_water %>
+        </td>
+        <!-- Display faction.sci_score_water end -->
+
+        <!-- Display faction.sci_def_land start -->
+        <td>
+          <%= faction.sci_def_land %>
+        </td>
+        <!-- Display faction.sci_def_land end -->
+
+        <!-- Display faction.sci_def_water start -->
+        <td>
+          <%= faction.sci_def_water %>
+        </td>
+        <!-- Display faction.sci_def_water end -->
+
+        <!-- Display faction.cul_score_land start -->
+        <td>
+          <%= faction.cul_score_land %>
+        </td>
+        <!-- Display faction.cul_score_land end -->
+
+        <!-- Display faction.cul_score_water start -->
+        <td>
+          <%= faction.cul_score_water %>
+        </td>
+        <!-- Display faction.cul_score_water end -->
+
+        <!-- Display faction.cul_def_land start -->
+        <td>
+          <%= faction.cul_def_land %>
+        </td>
+        <!-- Display faction.cul_def_land end -->
+
+        <!-- Display faction.cul_def_water start -->
+        <td>
+          <%= faction.cul_def_water %>
+        </td>
+        <!-- Display faction.cul_def_water end -->
+
+        <!-- Display faction.rel_score_land start -->
+        <td>
+          <%= faction.rel_score_land %>
+        </td>
+        <!-- Display faction.rel_score_land end -->
+
+        <!-- Display faction.rel_score_water start -->
+        <td>
+          <%= faction.rel_score_water %>
+        </td>
+        <!-- Display faction.rel_score_water end -->
+
+        <!-- Display faction.rel_def_land start -->
+        <td>
+          <%= faction.rel_def_land %>
+        </td>
+        <!-- Display faction.rel_def_land end -->
+
+        <!-- Display faction.rel_def_water start -->
+        <td>
+          <%= faction.rel_def_water %>
+        </td>
+        <!-- Display faction.rel_def_water end -->
+
+        <!-- Display faction.dip_score_land start -->
+        <td>
+          <%= faction.dip_score_land %>
+        </td>
+        <!-- Display faction.dip_score_land end -->
+
+        <!-- Display faction.dip_score_water start -->
+        <td>
+          <%= faction.dip_score_water %>
+        </td>
+        <!-- Display faction.dip_score_water end -->
+
+        <!-- Display faction.dip_def_land start -->
+        <td>
+          <%= faction.dip_def_land %>
+        </td>
+        <!-- Display faction.dip_def_land end -->
+
+        <!-- Display faction.dip_def_water start -->
+        <td>
+          <%= faction.dip_def_water %>
+        </td>
+        <!-- Display faction.dip_def_water end -->
+
+        <!-- Display faction.created_at start -->
+        <td>
+          <%= time_ago_in_words(faction.created_at) %> ago
+        </td>
+        <!-- Display faction.created_at end -->
+
+        <!-- Display faction.updated_at start -->
+        <td>
+          <%= time_ago_in_words(faction.updated_at) %> ago
+        </td>
+        <!-- Display faction.updated_at end -->
+
+        <td>
+          <a href="/factions/<%= faction.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

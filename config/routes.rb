@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Faction resource:
+
+  # CREATE
+  get("/factions/new", { :controller => "factions", :action => "new_form" })
+  post("/create_faction", { :controller => "factions", :action => "create_row" })
+
+  # READ
+  get("/factions", { :controller => "factions", :action => "index" })
+  get("/factions/:id_to_display", { :controller => "factions", :action => "show" })
+
+  # UPDATE
+  get("/factions/:prefill_with_id/edit", { :controller => "factions", :action => "edit_form" })
+  post("/update_faction/:id_to_modify", { :controller => "factions", :action => "update_row" })
+
+  # DELETE
+  get("/delete_faction/:id_to_remove", { :controller => "factions", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Leader resource:
 
   # CREATE
