@@ -1,0 +1,89 @@
+<!-- Validation failure messages -->
+<% if @leader.errors.any? %>
+  <% @leader.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit leader #<%= @leader.id %>
+</h1>
+
+<hr>
+
+<!-- Form leader start -->
+<form action="/update_leader/<%= @leader.id %>" method="post">
+<!-- Form leader end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @leader.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <textarea id="description" name="description" class="form-control" rows="3"><%= @leader.description %></textarea>
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <!-- Label and input for leader_ability start -->
+  <div class="form-group">
+    <label for="leader_ability">
+      Leader ability
+    </label>
+
+    <!-- Input for leader_ability start -->
+    <input type="text" id="leader_ability" name="leader_ability" class="form-control" value="<%= @leader.leader_ability %>">
+    <!-- Input for leader_ability end -->
+  </div>
+  <!-- Label and input for leader_ability end -->
+
+  <!-- Label and input for leader_unit start -->
+  <div class="form-group">
+    <label for="leader_unit">
+      Leader unit
+    </label>
+
+    <!-- Input for leader_unit start -->
+    <input type="text" id="leader_unit" name="leader_unit" class="form-control" value="<%= @leader.leader_unit %>">
+    <!-- Input for leader_unit end -->
+  </div>
+  <!-- Label and input for leader_unit end -->
+
+  <!-- Label and input for leader_agenda start -->
+  <div class="form-group">
+    <label for="leader_agenda">
+      Leader agenda
+    </label>
+
+    <!-- Input for leader_agenda start -->
+    <input type="text" id="leader_agenda" name="leader_agenda" class="form-control" value="<%= @leader.leader_agenda %>">
+    <!-- Input for leader_agenda end -->
+  </div>
+  <!-- Label and input for leader_agenda end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update leader
+  </button>
+</form>
+
+<hr>
+
+<a href="/leaders">
+  Go back
+</a>

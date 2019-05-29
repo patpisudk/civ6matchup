@@ -1,0 +1,100 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Leader #<%= @leader.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/leaders" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link leader start -->
+      <div class="col">
+        <a href="/leaders/<%= @leader.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit leader
+        </a>
+      </div>
+      <!-- Edit link leader end -->
+
+      <!-- Delete link leader start -->
+      <div class="col">
+        <a href="/delete_leader/<%= @leader.id %>" class="btn btn-block btn-outline-secondary">
+          Delete leader
+        </a>
+      </div>
+      <!-- Delete link leader end -->
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @leader.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @leader.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Leader ability
+      </dt>
+      <!-- Display leader_ability start -->
+      <dd>
+        <%= @leader.leader_ability %>
+      </dd>
+      <!-- Display leader_ability end -->
+
+      <dt>
+        Leader unit
+      </dt>
+      <!-- Display leader_unit start -->
+      <dd>
+        <%= @leader.leader_unit %>
+      </dd>
+      <!-- Display leader_unit end -->
+
+      <dt>
+        Leader agenda
+      </dt>
+      <!-- Display leader_agenda start -->
+      <dd>
+        <%= @leader.leader_agenda %>
+      </dd>
+      <!-- Display leader_agenda end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@leader.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@leader.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

@@ -1,0 +1,122 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All leaders
+    </h1>
+
+    <a href="/leaders/new" class="btn btn-block btn-outline-secondary">
+      Add a new leader
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Leader ability
+        </th>
+
+        <th>
+          Leader unit
+        </th>
+
+        <th>
+          Leader agenda
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @leaders.each do |leader| %>
+      <tr>
+        <!-- Display leader.id start -->
+        <td>
+          <%= leader.id %>
+        </td>
+        <!-- Display leader.id end -->
+
+        <!-- Display leader.name start -->
+        <td>
+          <%= leader.name %>
+        </td>
+        <!-- Display leader.name end -->
+
+        <!-- Display leader.description start -->
+        <td>
+          <%= leader.description %>
+        </td>
+        <!-- Display leader.description end -->
+
+        <!-- Display leader.leader_ability start -->
+        <td>
+          <%= leader.leader_ability %>
+        </td>
+        <!-- Display leader.leader_ability end -->
+
+        <!-- Display leader.leader_unit start -->
+        <td>
+          <%= leader.leader_unit %>
+        </td>
+        <!-- Display leader.leader_unit end -->
+
+        <!-- Display leader.leader_agenda start -->
+        <td>
+          <%= leader.leader_agenda %>
+        </td>
+        <!-- Display leader.leader_agenda end -->
+
+        <!-- Display leader.created_at start -->
+        <td>
+          <%= time_ago_in_words(leader.created_at) %> ago
+        </td>
+        <!-- Display leader.created_at end -->
+
+        <!-- Display leader.updated_at start -->
+        <td>
+          <%= time_ago_in_words(leader.updated_at) %> ago
+        </td>
+        <!-- Display leader.updated_at end -->
+
+        <td>
+          <a href="/leaders/<%= leader.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
