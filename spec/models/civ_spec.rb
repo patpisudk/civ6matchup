@@ -4,6 +4,8 @@ RSpec.describe Civ, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:factions) }
+
     end
 
     describe "InDirect Associations" do
