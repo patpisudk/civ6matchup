@@ -43,6 +43,58 @@ class MatchesController < ApplicationController
     end
   end
 
+  def create_row_from_faction
+    @match = Match.new
+
+    @match.map_id = params.fetch("map_id")
+    @match.faction01_id = params.fetch("faction01_id")
+    @match.faction02_id = params.fetch("faction02_id")
+    @match.faction03_id = params.fetch("faction03_id")
+    @match.faction04_id = params.fetch("faction04_id")
+    @match.faction05_id = params.fetch("faction05_id")
+    @match.faction06_id = params.fetch("faction06_id")
+    @match.faction07_id = params.fetch("faction07_id")
+    @match.faction08_id = params.fetch("faction08_id")
+    @match.faction09_id = params.fetch("faction09_id")
+    @match.faction10_id = params.fetch("faction10_id")
+    @match.faction11_id = params.fetch("faction11_id")
+    @match.faction12_id = params.fetch("faction12_id")
+
+    if @match.valid?
+      @match.save
+
+      redirect_to("/factions/#{@match.faction01_id}", notice: "Match created successfully.")
+    else
+      render("match_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_map
+    @match = Match.new
+
+    @match.map_id = params.fetch("map_id")
+    @match.faction01_id = params.fetch("faction01_id")
+    @match.faction02_id = params.fetch("faction02_id")
+    @match.faction03_id = params.fetch("faction03_id")
+    @match.faction04_id = params.fetch("faction04_id")
+    @match.faction05_id = params.fetch("faction05_id")
+    @match.faction06_id = params.fetch("faction06_id")
+    @match.faction07_id = params.fetch("faction07_id")
+    @match.faction08_id = params.fetch("faction08_id")
+    @match.faction09_id = params.fetch("faction09_id")
+    @match.faction10_id = params.fetch("faction10_id")
+    @match.faction11_id = params.fetch("faction11_id")
+    @match.faction12_id = params.fetch("faction12_id")
+
+    if @match.valid?
+      @match.save
+
+      redirect_to("/maps/#{@match.map_id}", notice: "Match created successfully.")
+    else
+      render("match_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @match = Match.find(params.fetch("prefill_with_id"))
 

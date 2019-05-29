@@ -6,6 +6,7 @@ class CivsController < ApplicationController
   end
 
   def show
+    @faction = Faction.new
     @civ = Civ.find(params.fetch("id_to_display"))
 
     render("civ_templates/show.html.erb")

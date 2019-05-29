@@ -6,6 +6,7 @@ class LeadersController < ApplicationController
   end
 
   def show
+    @faction = Faction.new
     @leader = Leader.find(params.fetch("id_to_display"))
 
     render("leader_templates/show.html.erb")

@@ -6,6 +6,7 @@ class MapsController < ApplicationController
   end
 
   def show
+    @match = Match.new
     @map = Map.find(params.fetch("id_to_display"))
 
     render("map_templates/show.html.erb")

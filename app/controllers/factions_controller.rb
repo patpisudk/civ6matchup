@@ -6,6 +6,7 @@ class FactionsController < ApplicationController
   end
 
   def show
+    @match = Match.new
     @faction = Faction.find(params.fetch("id_to_display"))
 
     render("faction_templates/show.html.erb")
@@ -47,6 +48,76 @@ class FactionsController < ApplicationController
       @faction.save
 
       redirect_back(:fallback_location => "/factions", :notice => "Faction created successfully.")
+    else
+      render("faction_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_civ
+    @faction = Faction.new
+
+    @faction.civ_id = params.fetch("civ_id")
+    @faction.leader_id = params.fetch("leader_id")
+    @faction.dom_score_land = params.fetch("dom_score_land")
+    @faction.dom_score_water = params.fetch("dom_score_water")
+    @faction.dom_def_land = params.fetch("dom_def_land")
+    @faction.dom_def_water = params.fetch("dom_def_water")
+    @faction.sci_score_land = params.fetch("sci_score_land")
+    @faction.sci_score_water = params.fetch("sci_score_water")
+    @faction.sci_def_land = params.fetch("sci_def_land")
+    @faction.sci_def_water = params.fetch("sci_def_water")
+    @faction.cul_score_land = params.fetch("cul_score_land")
+    @faction.cul_score_water = params.fetch("cul_score_water")
+    @faction.cul_def_land = params.fetch("cul_def_land")
+    @faction.cul_def_water = params.fetch("cul_def_water")
+    @faction.rel_score_land = params.fetch("rel_score_land")
+    @faction.rel_score_water = params.fetch("rel_score_water")
+    @faction.rel_def_land = params.fetch("rel_def_land")
+    @faction.rel_def_water = params.fetch("rel_def_water")
+    @faction.dip_score_land = params.fetch("dip_score_land")
+    @faction.dip_score_water = params.fetch("dip_score_water")
+    @faction.dip_def_land = params.fetch("dip_def_land")
+    @faction.dip_def_water = params.fetch("dip_def_water")
+
+    if @faction.valid?
+      @faction.save
+
+      redirect_to("/civs/#{@faction.civ_id}", notice: "Faction created successfully.")
+    else
+      render("faction_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_leader
+    @faction = Faction.new
+
+    @faction.civ_id = params.fetch("civ_id")
+    @faction.leader_id = params.fetch("leader_id")
+    @faction.dom_score_land = params.fetch("dom_score_land")
+    @faction.dom_score_water = params.fetch("dom_score_water")
+    @faction.dom_def_land = params.fetch("dom_def_land")
+    @faction.dom_def_water = params.fetch("dom_def_water")
+    @faction.sci_score_land = params.fetch("sci_score_land")
+    @faction.sci_score_water = params.fetch("sci_score_water")
+    @faction.sci_def_land = params.fetch("sci_def_land")
+    @faction.sci_def_water = params.fetch("sci_def_water")
+    @faction.cul_score_land = params.fetch("cul_score_land")
+    @faction.cul_score_water = params.fetch("cul_score_water")
+    @faction.cul_def_land = params.fetch("cul_def_land")
+    @faction.cul_def_water = params.fetch("cul_def_water")
+    @faction.rel_score_land = params.fetch("rel_score_land")
+    @faction.rel_score_water = params.fetch("rel_score_water")
+    @faction.rel_def_land = params.fetch("rel_def_land")
+    @faction.rel_def_water = params.fetch("rel_def_water")
+    @faction.dip_score_land = params.fetch("dip_score_land")
+    @faction.dip_score_water = params.fetch("dip_score_water")
+    @faction.dip_def_land = params.fetch("dip_def_land")
+    @faction.dip_def_water = params.fetch("dip_def_water")
+
+    if @faction.valid?
+      @faction.save
+
+      redirect_to("/leaders/#{@faction.leader_id}", notice: "Faction created successfully.")
     else
       render("faction_templates/new_form_with_errors.html.erb")
     end

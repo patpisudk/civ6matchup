@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/matches/new", { :controller => "matches", :action => "new_form" })
   post("/create_match", { :controller => "matches", :action => "create_row" })
+  post("/create_match_from_map", { :controller => "matches", :action => "create_row_from_map" })
+  post("/create_match_from_faction", { :controller => "matches", :action => "create_row_from_faction" })
 
   # READ
   get("/matches", { :controller => "matches", :action => "index" })
@@ -46,6 +48,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/factions/new", { :controller => "factions", :action => "new_form" })
   post("/create_faction", { :controller => "factions", :action => "create_row" })
+  post("/create_faction_from_leader", { :controller => "factions", :action => "create_row_from_leader" })
+  post("/create_faction_from_civ", { :controller => "factions", :action => "create_row_from_civ" })
 
   # READ
   get("/factions", { :controller => "factions", :action => "index" })
