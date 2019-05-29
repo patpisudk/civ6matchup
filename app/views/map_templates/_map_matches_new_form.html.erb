@@ -14,7 +14,7 @@
     </label>
 
     <!-- Input for faction01_id start -->
-    <input type="text" id="faction01_id" name="faction01_id" class="form-control" value="<%= @match.faction01_id %>">
+    <%= select_tag(:faction01_id, options_from_collection_for_select(Faction.all, :id, :civ_id, @match.faction01_id), :class => "form-control") %>
     <!-- Input for faction01_id end -->
   </div>
   <!-- Label and input for faction01_id end -->
