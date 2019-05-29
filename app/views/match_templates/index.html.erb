@@ -102,13 +102,21 @@
 
         <!-- Display match.map_id start -->
         <td>
-          <%= match.map.name %>
+          <% if match.map.present? %>
+            <a href="/maps/<%= match.map.id %>">
+              <%= match.map.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display match.map_id end -->
 
         <!-- Display match.faction01_id start -->
         <td>
-          <%= match.faction01.civ_id %>
+          <% if match.faction01.present? %>
+            <a href="/factions/<%= match.faction01.id %>">
+              <%= match.faction01.civ_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display match.faction01_id end -->
 

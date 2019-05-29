@@ -34,7 +34,11 @@
       </dt>
       <!-- Display map_id start -->
       <dd>
-        <%= @match.map_id %>
+        <% if @match.map.present? %>
+          <a href="/maps/<%= @match.map_id %>">
+            <%= @match.map.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display map_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display faction01_id start -->
       <dd>
-        <%= @match.faction01_id %>
+        <% if @match.faction01.present? %>
+          <a href="/factions/<%= @match.faction01_id %>">
+            <%= @match.faction01.civ_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display faction01_id end -->
 

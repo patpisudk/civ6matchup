@@ -138,13 +138,21 @@
 
         <!-- Display faction.civ_id start -->
         <td>
-          <%= faction.civ.name %>
+          <% if faction.civ.present? %>
+            <a href="/civs/<%= faction.civ.id %>">
+              <%= faction.civ.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display faction.civ_id end -->
 
         <!-- Display faction.leader_id start -->
         <td>
-          <%= faction.leader.name %>
+          <% if faction.leader.present? %>
+            <a href="/leaders/<%= faction.leader.id %>">
+              <%= faction.leader.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display faction.leader_id end -->
 

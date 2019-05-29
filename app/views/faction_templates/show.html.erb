@@ -34,7 +34,11 @@
       </dt>
       <!-- Display civ_id start -->
       <dd>
-        <%= @faction.civ_id %>
+        <% if @faction.civ.present? %>
+          <a href="/civs/<%= @faction.civ_id %>">
+            <%= @faction.civ.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display civ_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display leader_id start -->
       <dd>
-        <%= @faction.leader_id %>
+        <% if @faction.leader.present? %>
+          <a href="/leaders/<%= @faction.leader_id %>">
+            <%= @faction.leader.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display leader_id end -->
 
