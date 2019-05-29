@@ -1,6 +1,6 @@
 class CivsController < ApplicationController
   def index
-    @civs = Civ.all
+    @civs = Civ.page(params[:page]).per(10)
 
     render("civ_templates/index.html.erb")
   end

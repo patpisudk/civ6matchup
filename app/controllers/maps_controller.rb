@@ -1,6 +1,6 @@
 class MapsController < ApplicationController
   def index
-    @maps = Map.all
+    @maps = Map.page(params[:page]).per(10)
 
     render("map_templates/index.html.erb")
   end

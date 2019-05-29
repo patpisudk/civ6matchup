@@ -1,6 +1,6 @@
 class LeadersController < ApplicationController
   def index
-    @leaders = Leader.all
+    @leaders = Leader.page(params[:page]).per(10)
 
     render("leader_templates/index.html.erb")
   end

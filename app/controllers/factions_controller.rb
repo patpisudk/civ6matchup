@@ -1,6 +1,6 @@
 class FactionsController < ApplicationController
   def index
-    @factions = Faction.all
+    @factions = Faction.page(params[:page]).per(10)
 
     render("faction_templates/index.html.erb")
   end
