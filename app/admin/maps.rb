@@ -1,4 +1,6 @@
 ActiveAdmin.register Map do
+
+ permit_params :name, :land_weight, :water_weight
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
