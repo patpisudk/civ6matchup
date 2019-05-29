@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Map resource:
+
+  # CREATE
+  get("/maps/new", { :controller => "maps", :action => "new_form" })
+  post("/create_map", { :controller => "maps", :action => "create_row" })
+
+  # READ
+  get("/maps", { :controller => "maps", :action => "index" })
+  get("/maps/:id_to_display", { :controller => "maps", :action => "show" })
+
+  # UPDATE
+  get("/maps/:prefill_with_id/edit", { :controller => "maps", :action => "edit_form" })
+  post("/update_map/:id_to_modify", { :controller => "maps", :action => "update_row" })
+
+  # DELETE
+  get("/delete_map/:id_to_remove", { :controller => "maps", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Faction resource:
 
   # CREATE
