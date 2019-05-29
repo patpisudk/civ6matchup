@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @leader.factions.each do |faction| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/factions/<%= faction.id %>">
           <%= faction.civ_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_faction_from_leader/<%= faction.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="leader_factions_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "leader_templates/leader_factions_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

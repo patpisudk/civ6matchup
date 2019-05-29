@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link faction start -->
       <div class="col">
         <a href="/factions/<%= @faction.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit faction
         </a>
       </div>
-      <!-- Edit link faction end -->
 
-      <!-- Delete link faction start -->
       <div class="col">
         <a href="/delete_faction/<%= @faction.id %>" class="btn btn-block btn-outline-secondary">
           Delete faction
         </a>
       </div>
-      <!-- Delete link faction end -->
     </div>
 
     <dl>
       <dt>
         Civ
       </dt>
-      <!-- Display civ_id start -->
       <dd>
         <% if @faction.civ.present? %>
           <a href="/civs/<%= @faction.civ_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display civ_id end -->
 
       <dt>
         Leader
       </dt>
-      <!-- Display leader_id start -->
       <dd>
         <% if @faction.leader.present? %>
           <a href="/leaders/<%= @faction.leader_id %>">
@@ -53,213 +46,166 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display leader_id end -->
 
       <dt>
         Dom score land
       </dt>
-      <!-- Display dom_score_land start -->
       <dd>
         <%= @faction.dom_score_land %>
       </dd>
-      <!-- Display dom_score_land end -->
 
       <dt>
         Dom score water
       </dt>
-      <!-- Display dom_score_water start -->
       <dd>
         <%= @faction.dom_score_water %>
       </dd>
-      <!-- Display dom_score_water end -->
 
       <dt>
         Dom def land
       </dt>
-      <!-- Display dom_def_land start -->
       <dd>
         <%= @faction.dom_def_land %>
       </dd>
-      <!-- Display dom_def_land end -->
 
       <dt>
         Dom def water
       </dt>
-      <!-- Display dom_def_water start -->
       <dd>
         <%= @faction.dom_def_water %>
       </dd>
-      <!-- Display dom_def_water end -->
 
       <dt>
         Sci score land
       </dt>
-      <!-- Display sci_score_land start -->
       <dd>
         <%= @faction.sci_score_land %>
       </dd>
-      <!-- Display sci_score_land end -->
 
       <dt>
         Sci score water
       </dt>
-      <!-- Display sci_score_water start -->
       <dd>
         <%= @faction.sci_score_water %>
       </dd>
-      <!-- Display sci_score_water end -->
 
       <dt>
         Sci def land
       </dt>
-      <!-- Display sci_def_land start -->
       <dd>
         <%= @faction.sci_def_land %>
       </dd>
-      <!-- Display sci_def_land end -->
 
       <dt>
         Sci def water
       </dt>
-      <!-- Display sci_def_water start -->
       <dd>
         <%= @faction.sci_def_water %>
       </dd>
-      <!-- Display sci_def_water end -->
 
       <dt>
         Cul score land
       </dt>
-      <!-- Display cul_score_land start -->
       <dd>
         <%= @faction.cul_score_land %>
       </dd>
-      <!-- Display cul_score_land end -->
 
       <dt>
         Cul score water
       </dt>
-      <!-- Display cul_score_water start -->
       <dd>
         <%= @faction.cul_score_water %>
       </dd>
-      <!-- Display cul_score_water end -->
 
       <dt>
         Cul def land
       </dt>
-      <!-- Display cul_def_land start -->
       <dd>
         <%= @faction.cul_def_land %>
       </dd>
-      <!-- Display cul_def_land end -->
 
       <dt>
         Cul def water
       </dt>
-      <!-- Display cul_def_water start -->
       <dd>
         <%= @faction.cul_def_water %>
       </dd>
-      <!-- Display cul_def_water end -->
 
       <dt>
         Rel score land
       </dt>
-      <!-- Display rel_score_land start -->
       <dd>
         <%= @faction.rel_score_land %>
       </dd>
-      <!-- Display rel_score_land end -->
 
       <dt>
         Rel score water
       </dt>
-      <!-- Display rel_score_water start -->
       <dd>
         <%= @faction.rel_score_water %>
       </dd>
-      <!-- Display rel_score_water end -->
 
       <dt>
         Rel def land
       </dt>
-      <!-- Display rel_def_land start -->
       <dd>
         <%= @faction.rel_def_land %>
       </dd>
-      <!-- Display rel_def_land end -->
 
       <dt>
         Rel def water
       </dt>
-      <!-- Display rel_def_water start -->
       <dd>
         <%= @faction.rel_def_water %>
       </dd>
-      <!-- Display rel_def_water end -->
 
       <dt>
         Dip score land
       </dt>
-      <!-- Display dip_score_land start -->
       <dd>
         <%= @faction.dip_score_land %>
       </dd>
-      <!-- Display dip_score_land end -->
 
       <dt>
         Dip score water
       </dt>
-      <!-- Display dip_score_water start -->
       <dd>
         <%= @faction.dip_score_water %>
       </dd>
-      <!-- Display dip_score_water end -->
 
       <dt>
         Dip def land
       </dt>
-      <!-- Display dip_def_land start -->
       <dd>
         <%= @faction.dip_def_land %>
       </dd>
-      <!-- Display dip_def_land end -->
 
       <dt>
         Dip def water
       </dt>
-      <!-- Display dip_def_water start -->
       <dd>
         <%= @faction.dip_def_water %>
       </dd>
-      <!-- Display dip_def_water end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@faction.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@faction.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "faction_templates/faction_matches" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

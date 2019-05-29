@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @match.errors.any? %>
   <% @match.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,165 +12,111 @@
 
 <hr>
 
-<!-- Form match start -->
 <form action="/update_match/<%= @match.id %>" method="post">
-<!-- Form match end -->
 
-  <!-- Label and input for map_id start -->
   <div class="form-group">
     <label for="map_id">
       Map
     </label>
 
-    <!-- Input for map_id start -->
     <%= select_tag(:map_id, options_from_collection_for_select(Map.all, :id, :name, @match.map_id), :class => "form-control") %>
-    <!-- Input for map_id end -->
   </div>
-  <!-- Label and input for map_id end -->
 
-  <!-- Label and input for faction01_id start -->
   <div class="form-group">
     <label for="faction01_id">
       Faction01
     </label>
 
-    <!-- Input for faction01_id start -->
     <%= select_tag(:faction01_id, options_from_collection_for_select(Faction.all, :id, :civ_id, @match.faction01_id), :class => "form-control") %>
-    <!-- Input for faction01_id end -->
   </div>
-  <!-- Label and input for faction01_id end -->
 
-  <!-- Label and input for faction02_id start -->
   <div class="form-group">
     <label for="faction02_id">
       Faction02
     </label>
 
-    <!-- Input for faction02_id start -->
     <input type="text" id="faction02_id" name="faction02_id" class="form-control" value="<%= @match.faction02_id %>">
-    <!-- Input for faction02_id end -->
   </div>
-  <!-- Label and input for faction02_id end -->
 
-  <!-- Label and input for faction03_id start -->
   <div class="form-group">
     <label for="faction03_id">
       Faction03
     </label>
 
-    <!-- Input for faction03_id start -->
     <input type="text" id="faction03_id" name="faction03_id" class="form-control" value="<%= @match.faction03_id %>">
-    <!-- Input for faction03_id end -->
   </div>
-  <!-- Label and input for faction03_id end -->
 
-  <!-- Label and input for faction04_id start -->
   <div class="form-group">
     <label for="faction04_id">
       Faction04
     </label>
 
-    <!-- Input for faction04_id start -->
     <input type="text" id="faction04_id" name="faction04_id" class="form-control" value="<%= @match.faction04_id %>">
-    <!-- Input for faction04_id end -->
   </div>
-  <!-- Label and input for faction04_id end -->
 
-  <!-- Label and input for faction05_id start -->
   <div class="form-group">
     <label for="faction05_id">
       Faction05
     </label>
 
-    <!-- Input for faction05_id start -->
     <input type="text" id="faction05_id" name="faction05_id" class="form-control" value="<%= @match.faction05_id %>">
-    <!-- Input for faction05_id end -->
   </div>
-  <!-- Label and input for faction05_id end -->
 
-  <!-- Label and input for faction06_id start -->
   <div class="form-group">
     <label for="faction06_id">
       Faction06
     </label>
 
-    <!-- Input for faction06_id start -->
     <input type="text" id="faction06_id" name="faction06_id" class="form-control" value="<%= @match.faction06_id %>">
-    <!-- Input for faction06_id end -->
   </div>
-  <!-- Label and input for faction06_id end -->
 
-  <!-- Label and input for faction07_id start -->
   <div class="form-group">
     <label for="faction07_id">
       Faction07
     </label>
 
-    <!-- Input for faction07_id start -->
     <input type="text" id="faction07_id" name="faction07_id" class="form-control" value="<%= @match.faction07_id %>">
-    <!-- Input for faction07_id end -->
   </div>
-  <!-- Label and input for faction07_id end -->
 
-  <!-- Label and input for faction08_id start -->
   <div class="form-group">
     <label for="faction08_id">
       Faction08
     </label>
 
-    <!-- Input for faction08_id start -->
     <input type="text" id="faction08_id" name="faction08_id" class="form-control" value="<%= @match.faction08_id %>">
-    <!-- Input for faction08_id end -->
   </div>
-  <!-- Label and input for faction08_id end -->
 
-  <!-- Label and input for faction09_id start -->
   <div class="form-group">
     <label for="faction09_id">
       Faction09
     </label>
 
-    <!-- Input for faction09_id start -->
     <input type="text" id="faction09_id" name="faction09_id" class="form-control" value="<%= @match.faction09_id %>">
-    <!-- Input for faction09_id end -->
   </div>
-  <!-- Label and input for faction09_id end -->
 
-  <!-- Label and input for faction10_id start -->
   <div class="form-group">
     <label for="faction10_id">
       Faction10
     </label>
 
-    <!-- Input for faction10_id start -->
     <input type="text" id="faction10_id" name="faction10_id" class="form-control" value="<%= @match.faction10_id %>">
-    <!-- Input for faction10_id end -->
   </div>
-  <!-- Label and input for faction10_id end -->
 
-  <!-- Label and input for faction11_id start -->
   <div class="form-group">
     <label for="faction11_id">
       Faction11
     </label>
 
-    <!-- Input for faction11_id start -->
     <input type="text" id="faction11_id" name="faction11_id" class="form-control" value="<%= @match.faction11_id %>">
-    <!-- Input for faction11_id end -->
   </div>
-  <!-- Label and input for faction11_id end -->
 
-  <!-- Label and input for faction12_id start -->
   <div class="form-group">
     <label for="faction12_id">
       Faction12
     </label>
 
-    <!-- Input for faction12_id start -->
     <input type="text" id="faction12_id" name="faction12_id" class="form-control" value="<%= @match.faction12_id %>">
-    <!-- Input for faction12_id end -->
   </div>
-  <!-- Label and input for faction12_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update match

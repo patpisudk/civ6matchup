@@ -1,263 +1,174 @@
-<!-- Form faction start -->
 <form action="/create_faction_from_leader" method="post">
-<!-- Form faction end -->
 
-  <!-- Label and input for civ_id start -->
   <div class="form-group">
     <label for="civ_id">
       Civ
     </label>
 
-    <!-- Input for civ_id start -->
     <%= select_tag(:civ_id, options_from_collection_for_select(Civ.all, :id, :name, @faction.civ_id), :class => "form-control") %>
-    <!-- Input for civ_id end -->
   </div>
-  <!-- Label and input for civ_id end -->
 
-  <!-- Label and input for leader_id start -->
-  <!-- Input for leader_id start -->
   <input type="hidden" name="leader_id" value="<%= @leader.id %>">
-  <!-- Input for leader_id end -->
 
-  <!-- Label and input for dom_score_land start -->
   <div class="form-group">
     <label for="dom_score_land">
       Dom score land
     </label>
 
-    <!-- Input for dom_score_land start -->
     <input type="text" id="dom_score_land" name="dom_score_land" class="form-control" value="<%= @faction.dom_score_land %>">
-    <!-- Input for dom_score_land end -->
   </div>
-  <!-- Label and input for dom_score_land end -->
 
-  <!-- Label and input for dom_score_water start -->
   <div class="form-group">
     <label for="dom_score_water">
       Dom score water
     </label>
 
-    <!-- Input for dom_score_water start -->
     <input type="text" id="dom_score_water" name="dom_score_water" class="form-control" value="<%= @faction.dom_score_water %>">
-    <!-- Input for dom_score_water end -->
   </div>
-  <!-- Label and input for dom_score_water end -->
 
-  <!-- Label and input for dom_def_land start -->
   <div class="form-group">
     <label for="dom_def_land">
       Dom def land
     </label>
 
-    <!-- Input for dom_def_land start -->
     <input type="text" id="dom_def_land" name="dom_def_land" class="form-control" value="<%= @faction.dom_def_land %>">
-    <!-- Input for dom_def_land end -->
   </div>
-  <!-- Label and input for dom_def_land end -->
 
-  <!-- Label and input for dom_def_water start -->
   <div class="form-group">
     <label for="dom_def_water">
       Dom def water
     </label>
 
-    <!-- Input for dom_def_water start -->
     <input type="text" id="dom_def_water" name="dom_def_water" class="form-control" value="<%= @faction.dom_def_water %>">
-    <!-- Input for dom_def_water end -->
   </div>
-  <!-- Label and input for dom_def_water end -->
 
-  <!-- Label and input for sci_score_land start -->
   <div class="form-group">
     <label for="sci_score_land">
       Sci score land
     </label>
 
-    <!-- Input for sci_score_land start -->
     <input type="text" id="sci_score_land" name="sci_score_land" class="form-control" value="<%= @faction.sci_score_land %>">
-    <!-- Input for sci_score_land end -->
   </div>
-  <!-- Label and input for sci_score_land end -->
 
-  <!-- Label and input for sci_score_water start -->
   <div class="form-group">
     <label for="sci_score_water">
       Sci score water
     </label>
 
-    <!-- Input for sci_score_water start -->
     <input type="text" id="sci_score_water" name="sci_score_water" class="form-control" value="<%= @faction.sci_score_water %>">
-    <!-- Input for sci_score_water end -->
   </div>
-  <!-- Label and input for sci_score_water end -->
 
-  <!-- Label and input for sci_def_land start -->
   <div class="form-group">
     <label for="sci_def_land">
       Sci def land
     </label>
 
-    <!-- Input for sci_def_land start -->
     <input type="text" id="sci_def_land" name="sci_def_land" class="form-control" value="<%= @faction.sci_def_land %>">
-    <!-- Input for sci_def_land end -->
   </div>
-  <!-- Label and input for sci_def_land end -->
 
-  <!-- Label and input for sci_def_water start -->
   <div class="form-group">
     <label for="sci_def_water">
       Sci def water
     </label>
 
-    <!-- Input for sci_def_water start -->
     <input type="text" id="sci_def_water" name="sci_def_water" class="form-control" value="<%= @faction.sci_def_water %>">
-    <!-- Input for sci_def_water end -->
   </div>
-  <!-- Label and input for sci_def_water end -->
 
-  <!-- Label and input for cul_score_land start -->
   <div class="form-group">
     <label for="cul_score_land">
       Cul score land
     </label>
 
-    <!-- Input for cul_score_land start -->
     <input type="text" id="cul_score_land" name="cul_score_land" class="form-control" value="<%= @faction.cul_score_land %>">
-    <!-- Input for cul_score_land end -->
   </div>
-  <!-- Label and input for cul_score_land end -->
 
-  <!-- Label and input for cul_score_water start -->
   <div class="form-group">
     <label for="cul_score_water">
       Cul score water
     </label>
 
-    <!-- Input for cul_score_water start -->
     <input type="text" id="cul_score_water" name="cul_score_water" class="form-control" value="<%= @faction.cul_score_water %>">
-    <!-- Input for cul_score_water end -->
   </div>
-  <!-- Label and input for cul_score_water end -->
 
-  <!-- Label and input for cul_def_land start -->
   <div class="form-group">
     <label for="cul_def_land">
       Cul def land
     </label>
 
-    <!-- Input for cul_def_land start -->
     <input type="text" id="cul_def_land" name="cul_def_land" class="form-control" value="<%= @faction.cul_def_land %>">
-    <!-- Input for cul_def_land end -->
   </div>
-  <!-- Label and input for cul_def_land end -->
 
-  <!-- Label and input for cul_def_water start -->
   <div class="form-group">
     <label for="cul_def_water">
       Cul def water
     </label>
 
-    <!-- Input for cul_def_water start -->
     <input type="text" id="cul_def_water" name="cul_def_water" class="form-control" value="<%= @faction.cul_def_water %>">
-    <!-- Input for cul_def_water end -->
   </div>
-  <!-- Label and input for cul_def_water end -->
 
-  <!-- Label and input for rel_score_land start -->
   <div class="form-group">
     <label for="rel_score_land">
       Rel score land
     </label>
 
-    <!-- Input for rel_score_land start -->
     <input type="text" id="rel_score_land" name="rel_score_land" class="form-control" value="<%= @faction.rel_score_land %>">
-    <!-- Input for rel_score_land end -->
   </div>
-  <!-- Label and input for rel_score_land end -->
 
-  <!-- Label and input for rel_score_water start -->
   <div class="form-group">
     <label for="rel_score_water">
       Rel score water
     </label>
 
-    <!-- Input for rel_score_water start -->
     <input type="text" id="rel_score_water" name="rel_score_water" class="form-control" value="<%= @faction.rel_score_water %>">
-    <!-- Input for rel_score_water end -->
   </div>
-  <!-- Label and input for rel_score_water end -->
 
-  <!-- Label and input for rel_def_land start -->
   <div class="form-group">
     <label for="rel_def_land">
       Rel def land
     </label>
 
-    <!-- Input for rel_def_land start -->
     <input type="text" id="rel_def_land" name="rel_def_land" class="form-control" value="<%= @faction.rel_def_land %>">
-    <!-- Input for rel_def_land end -->
   </div>
-  <!-- Label and input for rel_def_land end -->
 
-  <!-- Label and input for rel_def_water start -->
   <div class="form-group">
     <label for="rel_def_water">
       Rel def water
     </label>
 
-    <!-- Input for rel_def_water start -->
     <input type="text" id="rel_def_water" name="rel_def_water" class="form-control" value="<%= @faction.rel_def_water %>">
-    <!-- Input for rel_def_water end -->
   </div>
-  <!-- Label and input for rel_def_water end -->
 
-  <!-- Label and input for dip_score_land start -->
   <div class="form-group">
     <label for="dip_score_land">
       Dip score land
     </label>
 
-    <!-- Input for dip_score_land start -->
     <input type="text" id="dip_score_land" name="dip_score_land" class="form-control" value="<%= @faction.dip_score_land %>">
-    <!-- Input for dip_score_land end -->
   </div>
-  <!-- Label and input for dip_score_land end -->
 
-  <!-- Label and input for dip_score_water start -->
   <div class="form-group">
     <label for="dip_score_water">
       Dip score water
     </label>
 
-    <!-- Input for dip_score_water start -->
     <input type="text" id="dip_score_water" name="dip_score_water" class="form-control" value="<%= @faction.dip_score_water %>">
-    <!-- Input for dip_score_water end -->
   </div>
-  <!-- Label and input for dip_score_water end -->
 
-  <!-- Label and input for dip_def_land start -->
   <div class="form-group">
     <label for="dip_def_land">
       Dip def land
     </label>
 
-    <!-- Input for dip_def_land start -->
     <input type="text" id="dip_def_land" name="dip_def_land" class="form-control" value="<%= @faction.dip_def_land %>">
-    <!-- Input for dip_def_land end -->
   </div>
-  <!-- Label and input for dip_def_land end -->
 
-  <!-- Label and input for dip_def_water start -->
   <div class="form-group">
     <label for="dip_def_water">
       Dip def water
     </label>
 
-    <!-- Input for dip_def_water start -->
     <input type="text" id="dip_def_water" name="dip_def_water" class="form-control" value="<%= @faction.dip_def_water %>">
-    <!-- Input for dip_def_water end -->
   </div>
-  <!-- Label and input for dip_def_water end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create faction

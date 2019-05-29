@@ -11,94 +11,74 @@
         </a>
       </div>
 
-      <!-- Edit link civ start -->
       <div class="col">
         <a href="/civs/<%= @civ.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit civ
         </a>
       </div>
-      <!-- Edit link civ end -->
 
-      <!-- Delete link civ start -->
       <div class="col">
         <a href="/delete_civ/<%= @civ.id %>" class="btn btn-block btn-outline-secondary">
           Delete civ
         </a>
       </div>
-      <!-- Delete link civ end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @civ.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Unique unit
       </dt>
-      <!-- Display unique_unit start -->
       <dd>
         <%= @civ.unique_unit %>
       </dd>
-      <!-- Display unique_unit end -->
 
       <dt>
         Unique infrastructure
       </dt>
-      <!-- Display unique_infrastructure start -->
       <dd>
         <%= @civ.unique_infrastructure %>
       </dd>
-      <!-- Display unique_infrastructure end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @civ.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Civ ability
       </dt>
-      <!-- Display civ_ability start -->
       <dd>
         <%= @civ.civ_ability %>
       </dd>
-      <!-- Display civ_ability end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@civ.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@civ.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "civ_templates/civ_factions" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

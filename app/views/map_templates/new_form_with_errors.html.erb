@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @map.present? %>
   <% if @map.errors.any? %>
     <% @map.errors.full_messages.each do |message| %>
@@ -16,45 +15,31 @@
 
 <hr>
 
-<!-- Form map start -->
 <form action="/create_map" method="post">
-<!-- Form map end -->
 
-  <!-- Label and input for name start -->
   <div class="form-group">
     <label for="name">
       Name
     </label>
 
-    <!-- Input for name start -->
     <input type="text" id="name" name="name" class="form-control" value="<%= @map.name %>">
-    <!-- Input for name end -->
   </div>
-  <!-- Label and input for name end -->
 
-  <!-- Label and input for land_weight start -->
   <div class="form-group">
     <label for="land_weight">
       Land weight
     </label>
 
-    <!-- Input for land_weight start -->
     <input type="text" id="land_weight" name="land_weight" class="form-control" value="<%= @map.land_weight %>">
-    <!-- Input for land_weight end -->
   </div>
-  <!-- Label and input for land_weight end -->
 
-  <!-- Label and input for water_weight start -->
   <div class="form-group">
     <label for="water_weight">
       Water weight
     </label>
 
-    <!-- Input for water_weight start -->
     <input type="text" id="water_weight" name="water_weight" class="form-control" value="<%= @map.water_weight %>">
-    <!-- Input for water_weight end -->
   </div>
-  <!-- Label and input for water_weight end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create map

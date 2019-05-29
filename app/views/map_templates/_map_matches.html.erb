@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @map.matches.each do |match| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/matches/<%= match.id %>">
           <%= match.map_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_match_from_map/<%= match.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="map_matches_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "map_templates/map_matches_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

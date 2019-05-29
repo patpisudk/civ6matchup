@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link match start -->
       <div class="col">
         <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit match
         </a>
       </div>
-      <!-- Edit link match end -->
 
-      <!-- Delete link match start -->
       <div class="col">
         <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-outline-secondary">
           Delete match
         </a>
       </div>
-      <!-- Delete link match end -->
     </div>
 
     <dl>
       <dt>
         Map
       </dt>
-      <!-- Display map_id start -->
       <dd>
         <% if @match.map.present? %>
           <a href="/maps/<%= @match.map_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display map_id end -->
 
       <dt>
         Faction01
       </dt>
-      <!-- Display faction01_id start -->
       <dd>
         <% if @match.faction01.present? %>
           <a href="/factions/<%= @match.faction01_id %>">
@@ -53,127 +46,98 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display faction01_id end -->
 
       <dt>
         Faction02
       </dt>
-      <!-- Display faction02_id start -->
       <dd>
         <%= @match.faction02_id %>
       </dd>
-      <!-- Display faction02_id end -->
 
       <dt>
         Faction03
       </dt>
-      <!-- Display faction03_id start -->
       <dd>
         <%= @match.faction03_id %>
       </dd>
-      <!-- Display faction03_id end -->
 
       <dt>
         Faction04
       </dt>
-      <!-- Display faction04_id start -->
       <dd>
         <%= @match.faction04_id %>
       </dd>
-      <!-- Display faction04_id end -->
 
       <dt>
         Faction05
       </dt>
-      <!-- Display faction05_id start -->
       <dd>
         <%= @match.faction05_id %>
       </dd>
-      <!-- Display faction05_id end -->
 
       <dt>
         Faction06
       </dt>
-      <!-- Display faction06_id start -->
       <dd>
         <%= @match.faction06_id %>
       </dd>
-      <!-- Display faction06_id end -->
 
       <dt>
         Faction07
       </dt>
-      <!-- Display faction07_id start -->
       <dd>
         <%= @match.faction07_id %>
       </dd>
-      <!-- Display faction07_id end -->
 
       <dt>
         Faction08
       </dt>
-      <!-- Display faction08_id start -->
       <dd>
         <%= @match.faction08_id %>
       </dd>
-      <!-- Display faction08_id end -->
 
       <dt>
         Faction09
       </dt>
-      <!-- Display faction09_id start -->
       <dd>
         <%= @match.faction09_id %>
       </dd>
-      <!-- Display faction09_id end -->
 
       <dt>
         Faction10
       </dt>
-      <!-- Display faction10_id start -->
       <dd>
         <%= @match.faction10_id %>
       </dd>
-      <!-- Display faction10_id end -->
 
       <dt>
         Faction11
       </dt>
-      <!-- Display faction11_id start -->
       <dd>
         <%= @match.faction11_id %>
       </dd>
-      <!-- Display faction11_id end -->
 
       <dt>
         Faction12
       </dt>
-      <!-- Display faction12_id start -->
       <dd>
         <%= @match.faction12_id %>
       </dd>
-      <!-- Display faction12_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@match.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@match.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
