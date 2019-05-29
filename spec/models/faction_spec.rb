@@ -4,6 +4,8 @@ RSpec.describe Faction, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:matches) }
+
     it { should belong_to(:leader) }
 
     it { should belong_to(:civ) }
