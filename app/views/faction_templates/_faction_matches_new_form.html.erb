@@ -9,7 +9,7 @@
     </label>
 
     <!-- Input for map_id start -->
-    <input type="text" id="map_id" name="map_id" class="form-control" value="<%= @match.map_id %>">
+    <%= select_tag(:map_id, options_from_collection_for_select(Map.all, :id, :name, @match.map_id), :class => "form-control") %>
     <!-- Input for map_id end -->
   </div>
   <!-- Label and input for map_id end -->
