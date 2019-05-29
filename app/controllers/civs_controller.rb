@@ -1,6 +1,7 @@
 class CivsController < ApplicationController
   def index
-    @civs = Civ.page(params[:page]).per(10)
+    @q = Civ.ransack(params[:q])
+    @civs = @q.result(:distinct => true).includes(:factions).page(params[:page]).per(10)
 
     render("civ_templates/index.html.erb")
   end

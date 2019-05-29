@@ -1,6 +1,7 @@
 class MapsController < ApplicationController
   def index
-    @maps = Map.page(params[:page]).per(10)
+    @q = Map.ransack(params[:q])
+    @maps = @q.result(:distinct => true).includes(:matches).page(params[:page]).per(10)
 
     render("map_templates/index.html.erb")
   end

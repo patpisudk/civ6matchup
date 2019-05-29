@@ -1,0 +1,164 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "factions_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :dip_def_water_cont, "Dip def water contains" %>
+    <%= f.text_field :dip_def_water_cont, :class => "form-control", :placeholder => "Dip def water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dip_def_land_cont, "Dip def land contains" %>
+    <%= f.text_field :dip_def_land_cont, :class => "form-control", :placeholder => "Dip def land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dip_score_water_cont, "Dip score water contains" %>
+    <%= f.text_field :dip_score_water_cont, :class => "form-control", :placeholder => "Dip score water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dip_score_land_cont, "Dip score land contains" %>
+    <%= f.text_field :dip_score_land_cont, :class => "form-control", :placeholder => "Dip score land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rel_def_water_cont, "Rel def water contains" %>
+    <%= f.text_field :rel_def_water_cont, :class => "form-control", :placeholder => "Rel def water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rel_def_land_cont, "Rel def land contains" %>
+    <%= f.text_field :rel_def_land_cont, :class => "form-control", :placeholder => "Rel def land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rel_score_water_cont, "Rel score water contains" %>
+    <%= f.text_field :rel_score_water_cont, :class => "form-control", :placeholder => "Rel score water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rel_score_land_cont, "Rel score land contains" %>
+    <%= f.text_field :rel_score_land_cont, :class => "form-control", :placeholder => "Rel score land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cul_def_water_cont, "Cul def water contains" %>
+    <%= f.text_field :cul_def_water_cont, :class => "form-control", :placeholder => "Cul def water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cul_def_land_cont, "Cul def land contains" %>
+    <%= f.text_field :cul_def_land_cont, :class => "form-control", :placeholder => "Cul def land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cul_score_water_cont, "Cul score water contains" %>
+    <%= f.text_field :cul_score_water_cont, :class => "form-control", :placeholder => "Cul score water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cul_score_land_cont, "Cul score land contains" %>
+    <%= f.text_field :cul_score_land_cont, :class => "form-control", :placeholder => "Cul score land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sci_def_water_cont, "Sci def water contains" %>
+    <%= f.text_field :sci_def_water_cont, :class => "form-control", :placeholder => "Sci def water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sci_def_land_cont, "Sci def land contains" %>
+    <%= f.text_field :sci_def_land_cont, :class => "form-control", :placeholder => "Sci def land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sci_score_water_cont, "Sci score water contains" %>
+    <%= f.text_field :sci_score_water_cont, :class => "form-control", :placeholder => "Sci score water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sci_score_land_cont, "Sci score land contains" %>
+    <%= f.text_field :sci_score_land_cont, :class => "form-control", :placeholder => "Sci score land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dom_def_water_cont, "Dom def water contains" %>
+    <%= f.text_field :dom_def_water_cont, :class => "form-control", :placeholder => "Dom def water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dom_def_land_cont, "Dom def land contains" %>
+    <%= f.text_field :dom_def_land_cont, :class => "form-control", :placeholder => "Dom def land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dom_score_water_cont, "Dom score water contains" %>
+    <%= f.text_field :dom_score_water_cont, :class => "form-control", :placeholder => "Dom score water contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dom_score_land_cont, "Dom score land contains" %>
+    <%= f.text_field :dom_score_land_cont, :class => "form-control", :placeholder => "Dom score land contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+  <div class="form-group">
+    <%= f.label :civ_name_cont, "Civ name contains" %>
+    <%= f.text_field :civ_name_cont, :class => "form-control", :placeholder => "Civ name contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :leader_name_cont, "Leader name contains" %>
+    <%= f.text_field :leader_name_cont, :class => "form-control", :placeholder => "Leader name contains" %>
+  </div>
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/factions" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#factions_filters">
+  Show filters
+</a>

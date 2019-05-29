@@ -1,6 +1,7 @@
 class FactionsController < ApplicationController
   def index
-    @factions = Faction.page(params[:page]).per(10)
+    @q = Faction.ransack(params[:q])
+    @factions = @q.result(:distinct => true).includes(:civ, :leader, :matches).page(params[:page]).per(10)
 
     render("faction_templates/index.html.erb")
   end

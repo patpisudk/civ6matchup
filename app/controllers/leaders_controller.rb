@@ -1,6 +1,7 @@
 class LeadersController < ApplicationController
   def index
-    @leaders = Leader.page(params[:page]).per(10)
+    @q = Leader.ransack(params[:q])
+    @leaders = @q.result(:distinct => true).includes(:factions).page(params[:page]).per(10)
 
     render("leader_templates/index.html.erb")
   end
