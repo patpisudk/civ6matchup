@@ -1,4 +1,6 @@
 ActiveAdmin.register Match do
+
+ permit_params :map_id, :faction01_id, :faction02_id, :faction03_id, :faction04_id, :faction05_id, :faction06_id, :faction07_id, :faction08_id, :faction09_id, :faction10_id, :faction11_id, :faction12_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
