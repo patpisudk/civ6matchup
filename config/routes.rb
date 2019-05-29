@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_match/:id_to_remove", { :controller => "matches", :action => "destroy_row" })
+  get("/delete_match_from_map/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_map" })
+  get("/delete_match_from_faction01/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_faction01" })
 
   #------------------------------
 
@@ -55,6 +57,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_faction/:id_to_remove", { :controller => "factions", :action => "destroy_row" })
+  get("/delete_faction_from_leader/:id_to_remove", { :controller => "factions", :action => "destroy_row_from_leader" })
+  get("/delete_faction_from_civ/:id_to_remove", { :controller => "factions", :action => "destroy_row_from_civ" })
 
   #------------------------------
 

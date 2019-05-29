@@ -93,6 +93,22 @@ class FactionsController < ApplicationController
     end
   end
 
+  def destroy_row_from_civ
+    @faction = Faction.find(params.fetch("id_to_remove"))
+
+    @faction.destroy
+
+    redirect_to("/civs/#{@faction.civ_id}", notice: "Faction deleted successfully.")
+  end
+
+  def destroy_row_from_leader
+    @faction = Faction.find(params.fetch("id_to_remove"))
+
+    @faction.destroy
+
+    redirect_to("/leaders/#{@faction.leader_id}", notice: "Faction deleted successfully.")
+  end
+
   def destroy_row
     @faction = Faction.find(params.fetch("id_to_remove"))
 
