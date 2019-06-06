@@ -14,9 +14,11 @@
           <%= match.map_id %>
         </a>
 
-        <a href="/delete_match_from_faction01/<%= match.id %>">
-          Delete
-        </a>
+        <%if current_user == match.owner %>
+          <a href="/delete_match_from_faction/<%= match.id %>">
+            Delete
+          </a>
+        <% end %>
 
       </li>
     <% end %>

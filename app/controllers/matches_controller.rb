@@ -1,7 +1,17 @@
 class MatchesController < ApplicationController
+  before_action :current_user_must_be_match_owner, :only => [:edit_form, :update_row, :destroy_row]
+
+  def current_user_must_be_match_owner
+    match = Match.find(params["id_to_display"] || params["prefill_with_id"] || params["id_to_modify"] || params["id_to_remove"])
+
+    unless current_user == match.owner
+      redirect_to :back, :alert => "You are not authorized for that."
+    end
+  end
+
   def index
     @q = Match.ransack(params[:q])
-    @matches = @q.result(:distinct => true).includes(:faction01, :map).page(params[:page]).per(10)
+    @matches = @q.result(:distinct => true).includes(:faction01, :map, :owner).page(params[:page]).per(10)
 
     render("match_templates/index.html.erb")
   end
@@ -34,6 +44,7 @@ class MatchesController < ApplicationController
     @match.faction10_id = params.fetch("faction10_id")
     @match.faction11_id = params.fetch("faction11_id")
     @match.faction12_id = params.fetch("faction12_id")
+    @match.owner_id = params.fetch("owner_id")
 
     if @match.valid?
       @match.save
@@ -60,6 +71,7 @@ class MatchesController < ApplicationController
     @match.faction10_id = params.fetch("faction10_id")
     @match.faction11_id = params.fetch("faction11_id")
     @match.faction12_id = params.fetch("faction12_id")
+    @match.owner_id = params.fetch("owner_id")
 
     if @match.valid?
       @match.save
@@ -86,6 +98,7 @@ class MatchesController < ApplicationController
     @match.faction10_id = params.fetch("faction10_id")
     @match.faction11_id = params.fetch("faction11_id")
     @match.faction12_id = params.fetch("faction12_id")
+    @match.owner_id = params.fetch("owner_id")
 
     if @match.valid?
       @match.save
@@ -118,6 +131,7 @@ class MatchesController < ApplicationController
     @match.faction10_id = params.fetch("faction10_id")
     @match.faction11_id = params.fetch("faction11_id")
     @match.faction12_id = params.fetch("faction12_id")
+    
 
     if @match.valid?
       @match.save
@@ -142,6 +156,14 @@ class MatchesController < ApplicationController
     @match.destroy
 
     redirect_to("/maps/#{@match.map_id}", notice: "Match deleted successfully.")
+  end
+
+  def destroy_row_from_owner
+    @match = Match.find(params.fetch("id_to_remove"))
+
+    @match.destroy
+
+    redirect_to("/users/#{@match.owner_id}", notice: "Match deleted successfully.")
   end
 
   def destroy_row

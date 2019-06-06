@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "civs#index"
+  devise_for :users
+  # Routes for the User resource:
+
+  # READ
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:id_to_display", { :controller => "users", :action => "show" })
+
+  #------------------------------
+
   # Routes for the Match resource:
 
   # CREATE
@@ -19,6 +29,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_match/:id_to_remove", { :controller => "matches", :action => "destroy_row" })
+  get("/delete_match_from_owner/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_owner" })
   get("/delete_match_from_map/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_map" })
   get("/delete_match_from_faction01/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_faction01" })
 

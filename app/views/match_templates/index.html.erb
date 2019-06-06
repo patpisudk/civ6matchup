@@ -81,6 +81,10 @@
         </th>
 
         <th>
+          Owner
+        </th>
+
+        <th>
           Created at
         </th>
 
@@ -156,6 +160,14 @@
 
         <td>
           <%= match.faction12_id %>
+        </td>
+
+        <td>
+          <% if match.owner.present? %>
+            <a href="/users/<%= match.owner.id %>">
+              <%= match.owner.email %>
+            </a>
+          <% end %>
         </td>
 
         <td>

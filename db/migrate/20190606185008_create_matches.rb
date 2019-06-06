@@ -14,6 +14,7 @@ class CreateMatches < ActiveRecord::Migration[5.1]
       t.integer :faction10_id
       t.integer :faction11_id
       t.integer :faction12_id
+      t.integer :owner_id
 
       t.timestamps
     end
