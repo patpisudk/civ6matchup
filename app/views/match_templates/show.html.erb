@@ -12,15 +12,19 @@
       </div>
 
       <div class="col">
-        <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit match
-        </a>
+        <% if current_user == @match.owner %>
+          <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit match
+          </a>
+        <% end %>
       </div>
 
       <div class="col">
-        <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-outline-secondary">
-          Delete match
-        </a>
+        <% if current_user == @match.owner %>
+          <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete match
+          </a>
+        <% end %>
       </div>
     </div>
 
@@ -122,6 +126,17 @@
       </dt>
       <dd>
         <%= @match.faction12_id %>
+      </dd>
+
+      <dt>
+        Owner
+      </dt>
+      <dd>
+        <% if @match.owner.present? %>
+          <a href="/users/<%= @match.owner_id %>">
+            <%= @match.owner.email %>
+          </a>
+        <% end %>
       </dd>
 
       <dt>
